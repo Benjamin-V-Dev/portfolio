@@ -1,0 +1,433 @@
+/* ------------------------------------------------
+-------------------- SECTION 1 --------------------
+------------------------------------------------ */
+.about_hero{
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    flex-wrap: wrap;
+}
+/* ------------------------------------------------
+-------------------- SECTION 1 IMG ----------------
+------------------------------------------------ */
+.about_hero_img{
+    width: 47.5%;
+}
+.about_hero_img div{
+    position: relative;
+    width: 360px;
+    height: 366px;
+    flex-shrink: 0;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.10);
+}
+.about_hero_img div img{
+    position: absolute;
+    bottom : 0;
+    left: 105px;
+    width: auto;
+    height: 410px;
+    z-index: 1;
+}
+
+/* ------------------------------------------------
+-------------------- SECTION 1 TXT ----------------
+------------------------------------------------ */
+
+.about_hero_headings{
+    width: 47.5%;
+}
+
+.about_hero_headings h1{
+    color: #A585EA;
+    font-family: Roboto;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+
+    background: var(--Gradient-Primary, linear-gradient(90deg, #A585EA 0%, #7C86F8 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 30px;
+}
+
+.about_hero_headings h2{
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.about_hero_headings p{
+    width: 500px;
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+/* ------------------------------------------------
+-------------------- SECTION 2 --------------------
+------------------------------------------------ */
+.about_skills{
+    width: 100%;
+    margin: 20% auto 10% auto;
+}
+
+.about_skills h2{
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 7.5%;
+}
+
+.about_skills_layout{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 100px;
+    width: 80%;
+}
+
+.about_skills_layout div{
+    display: flex;
+    height: 70px;
+    padding: 10px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 30px;
+}
+
+.about_skills_layout p{
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+
+/* ------------------------------------------------
+-------------------- SECTION 3  -------------------
+------------------------------------------------ */
+
+.about_career{
+    margin: 10% 0;
+}
+
+
+.about_career h2{
+    color: #FFF;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    padding-bottom: 7.5%;
+    margin: 0 auto;
+}
+
+
+.about_career_layout{
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.10);
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.about_career_line{
+    width: 1px;
+    height: 99.5%;
+    position: absolute;
+    top: 0.25%;
+    background: #FFF;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+
+/* ------------------------------------------------
+-------------------- FIXED CV  --------------------
+------------------------------------------------ */
+
+.cv{
+    position: fixed;
+    right: 50px;
+    bottom: 50%;
+
+    height: 110px;
+    width: 110px;
+    color: white;
+    background-color: #5A67FD;
+    border-radius: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transition: all ease-in-out 0.25s;
+}
+
+.cv:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all ease-in-out 0.25s;
+}
+
+.cv img{
+    width: 45px;
+    height: 45px;
+}
+
+.cv p{
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 117.773%;
+    margin-top: 5px;
+}
+.cv p:hover{
+    cursor: pointer;
+}
+
+
+/* ------------------------------------------------
+---------------------------------------------------
+---------- START RESPONSIVE ABOUT -----------------
+---------------------------------------------------
+------------------------------------------------ */
+
+
+
+/* ------------------------------------------------
+---------- HOME RESPONSIVE LAPTOP CV --------------
+------------------------------------------------ */
+@media (max-width: 1600px) {
+    .cv{
+        right: 40px;
+        top: 100px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .cv{
+        width: 80px;
+        height: 80px;
+    }
+    .cv img{
+        width: 35px;
+        height: 35px;
+    }
+    
+    .cv p{
+        font-size: 12px;
+    }
+}
+@media (max-width: 768px) {
+    .cv{
+        right: 20px;
+        top: 200px;
+    }
+}
+
+@media (max-width: 425px) {
+    .cv{
+        right: 10px;
+        top: 180px;
+    }
+}
+
+@media (max-width: 375px) {
+    .cv{
+        width: 60px;
+        height: 60px;
+    }
+    .cv img{
+        width: 25px;
+        height: 25px;
+    }
+    
+    .cv p{
+        font-size: 12px;
+    }
+}
+
+
+
+/* ------------------------------------------------
+---------- HOME RESPONSIVE LAPTOP L ---------------
+------------------------------------------------ */
+@media (max-width: 1220px) {
+    
+    .about_hero_img{
+        width: 40%;
+    }
+    .about_hero_img div{
+        width: 300px;
+        height: 300px;
+    }
+    .about_hero_img div img{
+        width: 300px;
+        height: auto;
+        left: 90px;
+    }
+
+    .about_hero_headings{
+        width: 47.5%;
+    }
+}
+
+
+/* ------------------------------------------------
+---------- HOME RESPONSIVE LAPTOP -----------------
+------------------------------------------------ */
+@media (max-width: 1024px) {
+    
+    .about_hero{
+        flex-direction: column;
+        
+    }
+    .about_hero_img{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .about_hero_img div{
+        width: 300px;
+        height: 300px;
+    }
+    .about_hero_img div img{
+        width: 300px;
+        height: auto;
+        left: 75px;
+    }
+
+    .about_hero_headings{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about_hero_headings h2{
+        visibility: hidden;
+    }
+
+    .about_hero_headings p{
+        width: 50%;
+        text-align: center;
+    }
+
+  
+}
+
+
+/* ------------------------------------------------
+---------- HOME RESPONSIVE TABLET -----------------
+------------------------------------------------ */
+@media (max-width: 768px) {
+    
+    .about_hero{
+        flex-direction: column;
+        
+    }
+    .about_hero_img{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        padding-top: 160px;
+    }
+    .about_hero_img div{
+        width: 250px;
+        height: 250px;
+    }
+    .about_hero_img div img{
+        width: 250px;
+        height: auto;
+        left: 55px;
+    }
+
+    .about_hero_headings p{
+        width: 90%;
+    }
+
+    .about_skills_layout{
+        justify-content: space-between;
+    }
+    .about_skills_layout div{
+       width: 45%;
+    }
+}
+
+/* ------------------------------------------------
+---------- HOME RESPONSIVE MOBILE L ---------------
+------------------------------------------------ */
+@media (max-width: 425px) {
+    .about_hero_img div img{
+        left: 45px;
+    }
+
+    .about_hero_headings h1{
+        font-size: 37px;
+    }
+
+    .about_hero_headings p{
+        width: 90%;
+        font-size: 15px;
+    }
+
+    .about_skills_layout{
+        justify-content: center;
+    }
+    .about_skills_layout div{
+       width: 45%;
+    }
+
+}
+
+
+/* ------------------------------------------------
+---------- HOME RESPONSIVE MOBILE M ---------------
+------------------------------------------------ */
+@media (max-width: 425px) {
+    .about_hero_img div img{
+        left: 35px;
+    }
+    .about_skills_layout div{
+       width: 45%;
+    }
+}
+
+/* ------------------------------------------------
+---------- HOME RESPONSIVE MOBILE S ---------------
+------------------------------------------------ */
+@media (max-width: 320px) {
+    .about_hero_img div img{
+        left: 15px;
+    }
+    .about_skills_layout div{
+        width: 40%;
+     }
+}

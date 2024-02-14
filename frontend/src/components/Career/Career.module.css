@@ -1,0 +1,199 @@
+
+.career_item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+.career_date{
+    display: flex;
+    justify-content: flex-end;
+    width: 45%;
+    height: 35px;
+}
+
+.career_date_spacer{
+    width: calc(100% - 200px);
+}
+
+.career_date_content{
+    width: 220px;
+    padding: 0 20px;
+    border-radius: 12px;
+    background: #FF9A61;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.career_date_content_spacer::before{
+    content: " - ";
+}
+
+.career_date p{
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.career_dot{
+    width: 20px;
+    height: 20px;
+    fill: #FFF;
+    stroke-width: 4px;
+    stroke: #FF9A61;
+}
+
+
+.career_details{
+    width: 45%;
+    margin: 30px 0;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.10);
+    display: flex;
+}
+
+.career_details_content{
+    width: 500px;
+}
+
+
+.career_detail_spacer{
+    width: calc(100% - 500px);
+}
+
+
+.career_details h3{
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+}
+
+.career-details p{
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+/* ------------------------------------------------
+---------------------------------------------------
+---------- START RESPONSIVE CAREER ----------------
+---------------------------------------------------
+------------------------------------------------ */
+
+
+
+
+
+/* ------------------------------------------------
+---------- CAREER RESPONSIVE LAPTOP ---------------
+------------------------------------------------ */
+@media (max-width: 1024px) {
+
+    .career_details_content{
+        width: 350px;
+    }
+
+}
+
+
+
+/* ------------------------------------------------
+---------- CAREER RESPONSIVE TABLET ---------------
+------------------------------------------------ */
+@media (max-width: 768px) {
+
+    .career_details_content{
+        width: 250px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+  
+    .career_date{
+        align-items: center;
+    }
+
+    .career_date_content{
+        padding: 30px 0;
+        width: 150px;
+        height: 50px;
+        flex-direction: column;
+    }
+
+    .career_date_content_spacer::before{
+        content: " | ";
+    }
+
+}
+
+
+@media (max-width: 550px) {
+  
+    .career_details_content{
+        width: 175px;
+    }
+
+}
+
+@media (max-width: 480px) {
+  
+    .career_details_content{
+        width: 140px;
+    }
+
+}
+
+
+/* ------------------------------------------------
+---------- CAREER RESPONSIVE MOBILE L -------------
+------------------------------------------------ */
+@media (max-width: 425px) {
+
+    .career_details_content{
+        width: 100px;
+    }
+
+}
+
+/* ------------------------------------------------
+---------- CAREER RESPONSIVE MOBILE M -------------
+------------------------------------------------ */
+@media (max-width: 375px) {
+
+    .career_details_content{
+        width: 80px;
+    }
+    .career_details_content p{
+        word-break: break-all;
+    }
+
+}
+/* ------------------------------------------------
+---------- CAREER RESPONSIVE MOBILE S -------------
+------------------------------------------------ */
+@media (max-width: 375px) {
+
+    .career_details_content{
+        width: 70px;
+    }
+    .career_details_content p{
+        word-break: break-all;
+    }
+
+}

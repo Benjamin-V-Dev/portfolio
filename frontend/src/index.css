@@ -1,0 +1,142 @@
+/* ------------------------------------------------
+-------------------- IMPORT ROBOTO ----------------
+------------------------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* ------------------------------------------------
+-------------------- RESET CSS --------------------
+------------------------------------------------ */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ------------------------------------------------
+-------------------- UNSET ALL --------------------
+------------------------------------------------ */
+a,ul,li{
+  all: unset;
+}
+p:hover,
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover{
+  cursor: default;
+}
+/* ------------------------------------------------
+-------------------- COLORS -----------------------
+------------------------------------------------ */
+.bg-primary{
+  background-color: rgba(167,114,255,1);
+}
+.bg-white{
+  background-color: rgba(255, 255, 255, 1);
+}
+.bg-black{
+  background-color: rgba(0, 0, 23, 1);
+}
+.bg-orange{
+  background-color: rgba(255,154,97,1);
+}
+.bg-blue{
+  background-color: rgba(90, 103, 253, 1);
+}
+
+
+.ft-primary{
+  color: rgba(167,114,255,1);
+}
+.ft-white{
+  color: rgba(255, 255, 255, 1);
+}
+.ft-black{
+  color: rgba(0, 0, 23, 1);
+}
+.ft-orange{
+  color: rgba(255,154,97,1);
+}
+.ft-blue{
+  color: rgba(90, 103, 253, 1);
+}
+
+
+
+/* ------------------------------------------------
+-------------------- FONT -------------------------
+------------------------------------------------ */
+
+.font-regular{
+  font-family: 'roboto',sans-serif;
+  font-weight: 400;
+}
+.font-medium{
+  font-family: 'roboto',sans-serif;
+  font-weight: 500;
+}
+.font-bold{
+  font-family: 'roboto',sans-serif;
+  font-weight: 700;
+}
+.font-xbold{
+  font-family: 'roboto',sans-serif;
+  font-weight: 900;
+}
+
+
+/* ------------------------------------------------
+-------------------- BODY -------------------------
+------------------------------------------------ */
+:root{
+  background-color: rgba(0, 0, 23, 1);
+  color: rgba(255, 255, 255, 1);
+  font-family: 'roboto',sans-serif;
+  font-weight: 400;
+}
+
+/* ------------------------------------------------
+-------------------- LIGHT ------------------------
+------------------------------------------------ */
+.light {
+  position: fixed;
+  top: 80px;
+  left: calc(50% - 331px);
+  width: 662px;
+  height: 662px;
+  flex-shrink: 0;
+  margin-top: 150px;
+  border-radius: 662px;
+  opacity: 0.2;
+  background: var(--Gradient-Primary, linear-gradient(90deg, #A585EA 0%, #7C86F8 100%));
+  filter: blur(132px);
+  z-index: -1;
+}
+
+/* ------------------------------------------------
+-------------------- MAIN -------------------------
+------------------------------------------------ */
+main{
+  width: 100%;
+  max-width: 1280px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+/* ------------------------------------------------
+-------------------- SECTION ----------------------
+------------------------------------------------ */
+section{
+  margin: 20% 0 10% 0;
+  padding: 0 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+

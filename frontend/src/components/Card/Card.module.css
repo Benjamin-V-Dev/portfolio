@@ -1,0 +1,153 @@
+
+
+.card {
+    min-width: 300px;
+    max-width: 420px;
+    width: 32%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    padding: 20px;
+    transition: all ease-in-out 0.25s;
+    box-sizing: border-box;
+}
+
+.card:hover {
+    transform: scale(1.025);
+    transition: all ease-in-out 0.25s;
+    cursor: pointer !important;
+}
+
+.imgContainer {
+    position: relative;
+    width: 100%;
+    height: 215px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgContainer img{
+    display: block;
+    width: auto !important;
+    height: 100% !important;
+}
+
+
+
+
+.titles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white);
+    margin-bottom: 25px;
+}
+
+.titles h2 {
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 30px;
+}
+
+.titles h3 {
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.titles h2:hover,
+.titles h3:hover{
+    cursor: pointer;
+}
+
+.githubIcon{
+    z-index: 999;
+    font-size: 25px;
+    transition: ease-in-out 0.2s;
+    display: inline-block;
+}
+.githubIcon:hover{
+    cursor: pointer;
+    transform: scale(1.25);
+    transition: ease-in-out 0.2s;
+}
+
+
+.tags {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------
+---------------------------------------------------
+---------- START RESPONSIVE CARD ------------------
+---------------------------------------------------
+------------------------------------------------ */
+
+
+
+/* ------------------------------------------------
+---------- CARD RESPONSIVE TABLET -----------------
+------------------------------------------------ */
+@media (max-width: 768px) {
+
+    .card{
+        width: auto;
+    }
+}
+
+/* ------------------------------------------------
+---------- CARD RESPONSIVE MOBILE L ---------------
+------------------------------------------------ */
+@media (max-width: 425px) {
+
+    .card{
+        width: auto;
+        min-width: unset;
+        max-width: 380px;
+    }
+}
+
+/* ------------------------------------------------
+---------- CARD RESPONSIVE MOBILE M ---------------
+------------------------------------------------ */
+@media (max-width: 375px) {
+
+    .card{
+        width: auto;
+        min-width: unset;
+        max-width: 330px;
+    }
+}
+
+/* ------------------------------------------------
+---------- CARD RESPONSIVE MOBILE S ---------------
+------------------------------------------------ */
+@media (max-width: 320px) {
+
+    .card{
+        width: auto;
+        min-width: unset;
+        max-width: 280px;
+    }
+}

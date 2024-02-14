@@ -1,0 +1,17 @@
+.tag {
+    display: inline-block;
+    height: 35px;
+    padding: 10px 15px;
+    border-radius: 13px;
+    background: rgba(255, 255, 255, 0.10);
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.tag:hover{
+    cursor: default;
+}

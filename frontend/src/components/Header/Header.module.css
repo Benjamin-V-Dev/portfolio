@@ -1,0 +1,290 @@
+/* ------------------------------------------------
+-------------------- HEADER -----------------------
+------------------------------------------------ */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    margin-left: auto;
+    margin-right: auto;
+
+    height: 80px;
+    max-width: 1280px;
+    padding: 0 5%;
+    background-color: #000017;
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* ------------------------------------------------
+-------------------- HEADER-TITLE -----------------
+------------------------------------------------ */
+.header_title{
+    width: 25%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    cursor: auto;
+}
+.header_title{
+    cursor: pointer;
+}
+
+/* ------------------------------------------------
+-------------------- HEADER-NAV -------------------
+------------------------------------------------ */
+.header_nav {
+    display: flex;
+}
+
+.header_nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 76px;
+    width: 110px;
+    color: var(--light-grey);
+    text-decoration: none;
+    border-bottom: 4px solid transparent;
+
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.header_nav a:hover{
+    cursor: pointer;
+}
+
+.header_nav_active {
+    color: rgb(167, 114, 255) !important;
+    border-bottom: 4px solid rgb(167, 114, 255) !important;
+}
+
+
+/* ------------------------------------------------
+-------------------- HEADER-CONTACT ---------------
+------------------------------------------------ */
+.header_contact{
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header_contact_txt{
+    display: flex;
+    width: 103px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.10);
+    transition: all ease-in-out 0.25s;
+}
+
+.header_contact_txt:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    transform-origin: center;
+    transition: all ease-in-out 0.25s;
+}
+
+
+.header_contact_txt p{
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.header_contact_img{
+    display: none;
+    width: 50px;
+    height: 50px;
+    padding: 10px 25px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.10);
+}
+
+.header_contact_img svg{
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+}
+
+/* ------------------------------------------------
+-------------------- HEADER -----------------------
+------------------------------------------------ */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    margin-left: auto;
+    margin-right: auto;
+
+    height: 80px;
+    max-width: 1280px;
+    padding: 0 5%;
+    background-color: #000017;
+    color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* ------------------------------------------------
+-------------------- HEADER-TITLE -----------------
+------------------------------------------------ */
+.header_title{
+    width: 25%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+/* ------------------------------------------------
+-------------------- HEADER-NAV -------------------
+------------------------------------------------ */
+.header_nav {
+    display: flex;
+}
+
+.header_nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 76px;
+    width: 110px;
+    color: var(--light-grey);
+    text-decoration: none;
+    border-bottom: 4px solid transparent;
+
+    font-family: Roboto;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.header_nav a:hover{
+    cursor: pointer;
+}
+
+.header_nav_active {
+    color: rgb(167, 114, 255) !important;
+    border-bottom: 4px solid rgb(167, 114, 255) !important;
+}
+
+
+
+
+/* ------------------------------------------------
+---------------------------------------------------
+---------- START RESPONSIVE HEADER ----------------
+---------------------------------------------------
+------------------------------------------------ */
+
+
+
+
+
+
+/* ------------------------------------------------
+---------- HEADER-CONTACT RESPONSIVE TABLET -------
+------------------------------------------------ */
+@media (max-width: 768px) {
+
+    
+    .header{
+        flex-wrap: wrap;
+        height: auto;
+        height: 160px;
+    }
+
+    .header_title{
+        height: 80px;
+        width: 50%;
+        order: 1;
+    }
+    
+    .header_nav{
+        height: 80px;
+        width: 100%;
+        order: 3;
+        justify-content: center;
+    }
+    
+    .header_contact{
+        height: 80px;
+        width: 50%;
+        order: 2;
+    }
+    
+    .header_contact_txt{
+        display: none;
+    }
+
+    .header_contact_img{
+        display: flex;
+    }
+}
+/* ------------------------------------------------
+---------- HEADER RESPONSIVE MOBILE L -------------
+------------------------------------------------ */
+@media (max-width: 425px) {
+
+    .header_title p{
+        font-size: 20px;
+    }
+}
+/* ------------------------------------------------
+---------- HEADER RESPONSIVE MOBILE M -------------
+------------------------------------------------ */
+@media (max-width: 375px) {
+
+    .header_title p{
+        font-size: 18px;
+    }
+}
+
+/* ------------------------------------------------
+---------- HEADER RESPONSIVE MOBILE s -------------
+------------------------------------------------ */
+@media (max-width: 320px) {
+
+    .header_title p{
+        font-size: 16px;
+    }
+}

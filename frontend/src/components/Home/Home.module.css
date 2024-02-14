@@ -1,0 +1,128 @@
+/* ------------------------------------------------
+-------------------- SECTION 1 --------------------
+------------------------------------------------ */
+.headings {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 280px;
+    margin-bottom: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+}
+
+
+.headings h1{
+    text-align: center;
+    font-family: Roboto;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.headings span{
+    color: rgba(167, 114, 255, 1);
+
+}
+
+
+.headings p {
+    width: 80%;
+    margin-top: 30px;
+    color: #FFF;
+    color: #FFF;
+
+    text-align: center;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+
+/* ------------------------------------------------
+-------------------- SECTION 2 --------------------
+------------------------------------------------ */
+
+.cards {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 40px;
+    padding-bottom: 100px;
+}
+
+
+
+
+
+/* ------------------------------------------------
+---------------------------------------------------
+---------- START RESPONSIVE HOME ------------------
+---------------------------------------------------
+------------------------------------------------ */
+
+
+
+/* ------------------------------------------------
+---------- HOME RESPONSIVE LAPTOP -----------------
+------------------------------------------------ */
+@media (max-width: 1024px) {
+
+    /* RESPONSIVE SECTION 1 */
+
+    .headings {
+        width: auto;
+    }
+
+    .headings h1{
+        font-size: 37px;
+    }
+
+    .headings p {
+        width: 50%;
+    }
+
+    /* RESPONSIVE SECTION 2 */
+
+    .cards {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 0 40px;
+        padding-bottom: 100px;
+    }
+}
+
+/* ------------------------------------------------
+---------- HOME RESPONSIVE MOBILE L ----------------
+------------------------------------------------ */
+@media (max-width: 425px) {
+    .headings {
+        width: auto;
+    }
+
+    .headings h1{
+        font-size: 37px;
+    }
+
+    .headings p {
+        width: 80%;
+    }
+}
+/* ------------------------------------------------
+---------- CARD RESPONSIVE MOBILE M ---------------
+------------------------------------------------ */
+@media (max-width: 375px) {
+    .headings h1{
+        font-size: 30px;
+    }
+}
