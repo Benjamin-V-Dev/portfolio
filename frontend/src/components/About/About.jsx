@@ -12,7 +12,7 @@ export default function AboutPage() {
 
 
     return (
-        <>
+        <main>
             <section className={styles.about_hero}>
 
                 <div className={styles.about_hero_img}>
@@ -56,6 +56,6 @@ export default function AboutPage() {
                 <p>CV</p>
             </a>
             
-        </>
+        </main>
     )
 }
