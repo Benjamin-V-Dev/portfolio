@@ -34,6 +34,7 @@ const ContactForm = () => {
             console.log('Message envoyé', response); // Traitement en cas de succès
             setSubmitting(false); // Mise à jour de l'état de soumission
             setIsSubmitted(true)
+            resetForm(); // Réinitialisation du formulaire
         })
         .catch(error => {
             console.error('Erreur d\'envoi', error); // Traitement en cas d'erreur
