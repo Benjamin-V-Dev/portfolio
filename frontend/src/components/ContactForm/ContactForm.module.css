@@ -1,0 +1,21 @@
+.RGPD a{
+    font-weight: bold;
+    border-bottom: 1px solid white;
+}
+.RGPD a:hover{
+    cursor: pointer;
+}
+
+
+form div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+form div input[type="checkbox"]{
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+}

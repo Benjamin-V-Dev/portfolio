@@ -90,12 +90,13 @@
 }
 
 .contact_modal_content form input{
-    all: unset;
     display: flex;
     padding: 20px;
     align-items: center;
     gap: 10px;
     align-self: stretch;
+    border: none;
+    outline: none;
     border-radius: 15px;
     background: #FFF;
 

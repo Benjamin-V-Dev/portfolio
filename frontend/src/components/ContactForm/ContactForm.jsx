@@ -2,65 +2,80 @@ import React from 'react';
 import { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import axios from 'axios';
+import styles from '../ContactForm/ContactForm.module.css'
 
 const ContactForm = () => {
-
     const [isSubmitted, setIsSubmitted] = useState(false); // État pour gérer la confirmation
 
-    // États initiaux étendus pour inclure les menus déroulants
+    // États initiaux étendus pour inclure RGPD
     const initialValues = {
         name: '',
         email: '',
         message: '',
+        rgpd: false, // Ajout de l'état initial pour RGPD
     };
 
     // Étendre la fonction de validation pour inclure les nouveaux champs
     const validate = values => {
         const errors = {};
+        if (!values.name) {
+            errors.name = 'Nom et prénom requis';
+        }
         if (!values.email) {
             errors.email = 'Email requis';
         } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
             errors.email = 'Adresse email invalide';
         }
+        if (!values.message) {
+            errors.message = 'Message requis';
+        }
+        if (!values.rgpd) {
+            errors.rgpd = 'Vous devez accepter la politique de confidentialité pour continuer.';
+        }
         return errors;
     };
     
     // Fonction appelée lors de la soumission du formulaire
-    const onSubmit = (values, { setSubmitting }) => {
+    const onSubmit = (values, { setSubmitting, resetForm }) => {
         
         // Envoi des données du formulaire via Axios
         axios.post('http://193.203.169.141/api/send', values)
         .then(response => {
             console.log('Message envoyé', response); // Traitement en cas de succès
-            setSubmitting(false); // Mise à jour de l'état de soumission
-            setIsSubmitted(true)
+            setIsSubmitted(true); // Mise à jour de l'état isSubmitted
             resetForm(); // Réinitialisation du formulaire
         })
         .catch(error => {
             console.error('Erreur d\'envoi', error); // Traitement en cas d'erreur
-            setSubmitting(false); // Mise à jour de l'état de soumission
-            setIsSubmitted(false)
+        })
+        .finally(() => {
+            setSubmitting(false); // Mise à jour de l'état de soumission dans tous les cas
         });
     };
 
     return (
         <Formik initialValues={initialValues} validate={validate} onSubmit={onSubmit}>
             <Form>
-                <Field className="Field" type="text" name="name" placeholder="Full name" />
+                <Field className="Field" type="text" name="name" placeholder="Nom et prénom" />
                 <ErrorMessage name="name" component="div" />
 
-                <Field className="Field" type="email" name="email" placeholder="you@xyz.com" />
+                <Field className="Field" type="email" name="email" placeholder="Adresse email" />
                 <ErrorMessage name="email" component="div" />
 
-                <Field className="Field Field-message" as="textarea" name="message" placeholder="Enter here..." />
+                <Field className="Field Field-message" as="textarea" name="message" placeholder="Votre message" />
                 <ErrorMessage name="message" component="div" />
 
+                <div className={styles.RGPD}>
+                    <Field type="checkbox" name="rgpd" />
+                    <label htmlFor="rgpd">J'accepte les <a href="/CGU">conditions générales d'utilisation.</a></label>
+                </div>
+                <ErrorMessage name="rgpd" component="div" />
+
                 <button className='defaultButton' type="submit">Envoyer</button>
-                {/* Message de confirmation */}
                 {isSubmitted && <p className='validatetext'>Votre message a été envoyé avec succès !</p>}
             </Form>
         </Formik>
-    )
+    );
 }
 
 export default ContactForm;
