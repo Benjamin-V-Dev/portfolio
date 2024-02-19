@@ -39,7 +39,7 @@ const ContactForm = () => {
     const onSubmit = (values, { setSubmitting, resetForm }) => {
         
         // Envoi des données du formulaire via Axios
-        axios.post('http://193.203.169.141/api/send', values)
+        axios.post('https://benjamin-vallon.fr/api/send', values)
         .then(response => {
             console.log('Message envoyé', response); // Traitement en cas de succès
             setIsSubmitted(true); // Mise à jour de l'état isSubmitted
