@@ -18,7 +18,7 @@ const projects =  [
         imgAlt: "Capture d'écran du projet 'Kasa'",
         github: "https://github.com/Benjamin-V-Dev/Kasa",
         tags: ["React", "Sass"],
-        link: "https://kasa.benjamin-v-dev.fr/"
+        link: "https://kasa.benjamin-vallon.fr/"
       },
       {
         id: 3,
@@ -28,7 +28,7 @@ const projects =  [
         imgAlt: "Capture d'écran du projet 'Mon Vieux Grimoire'",
         github: "https://github.com/Benjamin-V-Dev/MonVieuxGrimoire",
         tags: ["Node.js", "MongoDB"],
-        link: "https://mon-vieux-grimoire-ten.vercel.app/"
+        link: "https://mvg.benjamin-vallon.fr/"
       }
 ]
 
