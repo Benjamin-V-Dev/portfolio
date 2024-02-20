@@ -8,7 +8,11 @@ const skills = [
   "SEO",
   "Veille",
   "Bootstrap",
-  "Git/Github"
+  "Git/Github",
+  "Leaflet",
+  "OpenStreetMap",
+  "VPS",
+  "Nodemailer"
 ]
 
 export default skills;

@@ -17,6 +17,19 @@
     cursor: pointer !important;
 }
 
+.specialCard .imgContainer{
+    background-color: black;
+}
+.specialCard .imgContainer img{
+    margin: 0 auto;
+    display: block;;
+    height: 50% !important;
+    width: 50% !important;
+}
+.specialCard .github{
+    visibility: hidden;
+}
+
 .imgContainer {
     position: relative;
     width: 100%;

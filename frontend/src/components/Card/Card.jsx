@@ -5,12 +5,14 @@ import Tag from '../../components/Tag/Tag'
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
-export default function Card({ project }) {
+export default function Card({ project, isSpecial }) {
+
+    const cardClass = isSpecial ? `${styles.card} ${styles.specialCard}` : styles.card;
 
     return (
         <>
-            <a href={project.link} target='_blank' rel='noopener noreferrer' className={styles.card}>
-                <div key={project.id} >
+            <a href={project.link} target='_blank' rel='noopener noreferrer' className={cardClass}>
+                <div key={project.id}> 
                     <div className={styles.imgContainer}>
 
                     <LazyLoadImage

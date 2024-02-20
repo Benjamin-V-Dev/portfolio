@@ -17,7 +17,11 @@ export default function Home() {
       <section>
         <div className={styles.cards}>
           {projects.map((project) => (
-            <Card project={project} key={project.id}/>
+            <Card
+            project={project}
+            key={project.id}
+            isSpecial={project.id === 2}
+            />
           ))}
         </div>
       </section>

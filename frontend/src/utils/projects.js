@@ -7,11 +7,21 @@ const projects =  [
         img: "/Portfolio.webp",
         imgAlt: "Capture d'écran du projet 'Portfolio'",
         github: "https://github.com/Benjamin-V-Dev/Portfolio",
-        tags: ["React"],
+        tags: ["React", "Nodemailer", "NextJS"],
         link: "https://benjamin-vallon.fr"
       },
       {
         id: 2,
+        title: "Map-Diag",
+        subtitle: "Application web de localisation de diagnostiqueurs immobiliers",
+        img: "/Map_Diag_logo.png",
+        imgAlt: "logo du projet 'Map-Diag'",
+        github: "/",
+        tags: ["React", "Node", "Leaflet", "OpenStreetMap"],
+        link: "https://map-diag.fr/"
+      },
+      {
+        id: 3,
         title: "Kasa",
         subtitle: "Application web de location immobilière (projet fictif)",
         img: "/Kasa.webp",
@@ -21,7 +31,7 @@ const projects =  [
         link: "https://kasa.benjamin-vallon.fr/"
       },
       {
-        id: 3,
+        id: 4,
         title: "Mon Vieux Grimoire",
         subtitle: "Site de notation de livres (projet fictif)",
         img: "/MonVieuxGrimoire.webp",
