@@ -67,7 +67,7 @@
 ---------- START RESPONSIVE HOME ------------------
 ---------------------------------------------------
 ------------------------------------------------ */
-@media (max-width: 2038px) {
+@media (max-width: 1560px) {
     .cards {
         justify-content: flex-start;
     }
