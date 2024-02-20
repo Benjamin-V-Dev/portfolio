@@ -33,7 +33,7 @@ app.get("/", (req, res)=>{
 
 
 const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST, // Remplace par ton domaine
+  host: "mail.matheolopes.com", // Remplace par ton domaine
   port: 465, // Port SMTP standard pour la soumission de mails
   secure: true, // Pour le port 587, cette option doit être false
   auth: {
