@@ -7,13 +7,13 @@ const projects =  [
         img: "/Portfolio.webp",
         imgAlt: "Capture d'écran du projet 'Portfolio'",
         github: "https://github.com/Benjamin-V-Dev/Portfolio",
-        tags: ["Next.js"],
-        link: "/"
+        tags: ["React"],
+        link: "https://benjamin-vallon.fr"
       },
       {
         id: 2,
         title: "Kasa",
-        subtitle: "Application web de location immobilière",
+        subtitle: "Application web de location immobilière (projet fictif)",
         img: "/Kasa.webp",
         imgAlt: "Capture d'écran du projet 'Kasa'",
         github: "https://github.com/Benjamin-V-Dev/Kasa",
@@ -23,7 +23,7 @@ const projects =  [
       {
         id: 3,
         title: "Mon Vieux Grimoire",
-        subtitle: "Site de notation de livres",
+        subtitle: "Site de notation de livres (projet fictif)",
         img: "/MonVieuxGrimoire.webp",
         imgAlt: "Capture d'écran du projet 'Mon Vieux Grimoire'",
         github: "https://github.com/Benjamin-V-Dev/MonVieuxGrimoire",

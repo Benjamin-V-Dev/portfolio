@@ -112,7 +112,8 @@
 @media (max-width: 768px) {
 
     .card{
-        width: auto;
+       
+
     }
 }
 
@@ -122,9 +123,7 @@
 @media (max-width: 425px) {
 
     .card{
-        width: auto;
-        min-width: unset;
-        max-width: 380px;
+       
     }
 }
 
@@ -134,9 +133,7 @@
 @media (max-width: 375px) {
 
     .card{
-        width: auto;
-        min-width: unset;
-        max-width: 330px;
+       
     }
 }
 
@@ -146,8 +143,6 @@
 @media (max-width: 320px) {
 
     .card{
-        width: auto;
-        min-width: unset;
-        max-width: 280px;
+      
     }
 }
