@@ -35,7 +35,7 @@ app.get("/", (req, res)=>{
 
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST, // Remplace par ton domaine
-  port: 465, // Port SMTP standard pour la soumission de mails
+  port: 466, // Port SMTP standard pour la soumission de mails
   secure: true, // Pour le port 587, cette option doit être false
   auth: {
     user: process.env.SMTP_MAIL, // Ton adresse email complète
@@ -44,16 +44,19 @@ const transporter = nodemailer.createTransport({
   tls: {
     rejectUnauthorized: false // Ajoute cette ligne pour ignorer les erreurs de certificat
   }
+  console.log(SMTP_HOST);
 });
 
 app.post('/api/send', (req, res) => {
+  console.log("api")
+
   const { name, email, message } = req.body;
 
   const mailOptions = {
       from: email,
       to: process.env.SMTP_MAIL, // L'email destinataire (peut être le même que l'expéditeur)
       subject: `Nouveau message de ${name} depuis portfolio`,
-      text: `Message: ${message}`
+      text: `Message: ${message}`,
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
