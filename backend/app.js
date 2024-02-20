@@ -53,7 +53,7 @@ app.post('/api/send', (req, res) => {
       from: email,
       to: process.env.SMTP_MAIL, // L'email destinataire (peut être le même que l'expéditeur)
       subject: `Nouveau message de ${name} depuis le portfolio`,
-      text: `Message: ${message}`
+      text: `portfolio : ${message}`
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
