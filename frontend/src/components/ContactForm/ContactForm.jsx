@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import axios from 'axios';
-import styles from '../assets/css/Contact.module.css';
+import styles from '../ContactForm/ContactForm.module.css';
 
 
 const ContactForm = () => {
