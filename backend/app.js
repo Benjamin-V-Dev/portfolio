@@ -34,8 +34,8 @@ app.get("/", (req, res)=>{
 
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST, // Remplace par ton domaine
-  port: 587, // Port SMTP standard pour la soumission de mails
-  secure: false, // Pour le port 587, cette option doit être false
+  port: 465, // Port SMTP standard pour la soumission de mails
+  secure: true, // Pour le port 587, cette option doit être false
   auth: {
     user: process.env.SMTP_MAIL, // Ton adresse email complète
     pass: process.env.SMTP_PASS // Ton mot de passe
@@ -50,7 +50,7 @@ app.post('/api/send', (req, res) => {
 
   const mailOptions = {
       from: email,
-      to: process.env.SMTP_MAIL, // L'email destinataire (peut être le même que l'expéditeur)
+      to: "matheo@matheolopes.com", // L'email destinataire (peut être le même que l'expéditeur)
       subject: `Nouveau message de ${name}`,
       text: `Message: ${message}\nType de Projet: ${projectType}\nUrgence: ${projectUrgency}`
   };
