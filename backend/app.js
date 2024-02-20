@@ -6,6 +6,7 @@ const nodemailer = require('nodemailer')
 const compression = require('compression');
 const cors = require('cors')
 
+const app = express();
 
 app.use(compression());
 
@@ -33,7 +34,7 @@ app.get("/", (req, res)=>{
 
 
 const transporter = nodemailer.createTransport({
-  host: "mail.matheolopes.com", // Remplace par ton domaine
+  host: process.env.SMTP_HOST, // Remplace par ton domaine
   port: 465, // Port SMTP standard pour la soumission de mails
   secure: true, // Pour le port 587, cette option doit être false
   auth: {
@@ -46,13 +47,13 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post('/api/send', (req, res) => {
-  const { name, email, message, projectType, projectUrgency } = req.body;
+  const { name, email, message } = req.body;
 
   const mailOptions = {
       from: email,
-      to: "matheo@matheolopes.com", // L'email destinataire (peut être le même que l'expéditeur)
-      subject: `Nouveau message de ${name}`,
-      text: `Message: ${message}\nType de Projet: ${projectType}\nUrgence: ${projectUrgency}`
+      to: process.env.SMTP_MAIL, // L'email destinataire (peut être le même que l'expéditeur)
+      subject: `Nouveau message de ${name} depuis Map-Diag`,
+      text: `Message: ${message}`
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
@@ -66,7 +67,7 @@ app.post('/api/send', (req, res) => {
   });
 });
 
-app.listen(8800, ()=>{
+app.listen(8802, ()=>{
   console.log("Backend server is running!");
 })
 
