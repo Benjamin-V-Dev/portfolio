@@ -13,7 +13,7 @@ const projects =  [
       {
         id: 2,
         title: "Map-Diag",
-        subtitle: "Application web de localisation de diagnostiqueurs immobiliers",
+        subtitle: "Localise les diagnostiqueurs immobiliers",
         img: "/Map_Diag_logo.png",
         imgAlt: "logo du projet 'Map-Diag'",
         github: "/",
