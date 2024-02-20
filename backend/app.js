@@ -6,7 +6,6 @@ const nodemailer = require('nodemailer')
 const compression = require('compression');
 const cors = require('cors')
 
-const app = express();
 
 app.use(compression());
 
@@ -35,8 +34,8 @@ app.get("/", (req, res)=>{
 
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST, // Remplace par ton domaine
-  port: 466, // Port SMTP standard pour la soumission de mails
-  secure: true, // Pour le port 587, cette option doit être false
+  port: 587, // Port SMTP standard pour la soumission de mails
+  secure: false, // Pour le port 587, cette option doit être false
   auth: {
     user: process.env.SMTP_MAIL, // Ton adresse email complète
     pass: process.env.SMTP_PASS // Ton mot de passe
@@ -47,15 +46,13 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post('/api/send', (req, res) => {
-  console.log("api")
-
-  const { name, email, message } = req.body;
+  const { name, email, message, projectType, projectUrgency } = req.body;
 
   const mailOptions = {
       from: email,
       to: process.env.SMTP_MAIL, // L'email destinataire (peut être le même que l'expéditeur)
-      subject: `Nouveau message de ${name} depuis portfolio`,
-      text: `Message: ${message}`,
+      subject: `Nouveau message de ${name}`,
+      text: `Message: ${message}\nType de Projet: ${projectType}\nUrgence: ${projectUrgency}`
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
