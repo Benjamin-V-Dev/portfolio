@@ -51,7 +51,7 @@
 .cards {
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
     padding: 0 40px;
@@ -67,6 +67,13 @@
 ---------- START RESPONSIVE HOME ------------------
 ---------------------------------------------------
 ------------------------------------------------ */
+@media (max-width: 2038px) {
+    .cards {
+        justify-content: flex-start;
+    }
+
+}
+
 @media (max-width: 1214px) {
     .cards {
         justify-content: center;
