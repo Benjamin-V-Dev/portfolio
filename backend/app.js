@@ -44,7 +44,6 @@ const transporter = nodemailer.createTransport({
   tls: {
     rejectUnauthorized: false // Ajoute cette ligne pour ignorer les erreurs de certificat
   }
-  console.log(SMTP_HOST);
 });
 
 app.post('/api/send', (req, res) => {
