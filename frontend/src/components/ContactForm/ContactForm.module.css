@@ -1,7 +1,4 @@
-.RGPD a{
-    font-weight: bold;
-    border-bottom: 1px solid white;
-}
+
 .RGPD a:hover{
     cursor: pointer;
 }
@@ -18,4 +15,11 @@ form div input[type="checkbox"]{
     width: 15px;
     height: 15px;
     border-radius: 5px;
+}
+.cgu{
+    font-weight: bold;
+    border-bottom: 1px solid white;
+}
+.cgu:hover{
+    cursor: pointer;
 }

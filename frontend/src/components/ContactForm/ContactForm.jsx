@@ -40,7 +40,7 @@ const ContactForm = () => {
     const onSubmit = (values, { setSubmitting, resetForm }) => {
         
         // Envoi des données du formulaire via Axios
-        axios.post('https://benjamin-vallon.fr/api/send', values)
+        axios.post('https://map-diag.fr/api/send', values)
         .then(response => {
             console.log('Message envoyé', response); // Traitement en cas de succès
             setIsSubmitted(true); // Mise à jour de l'état isSubmitted
@@ -70,7 +70,7 @@ const ContactForm = () => {
 
                   <div>
                       <Field type="checkbox" name="rgpd" />
-                      <label htmlFor="rgpd">J'accepte les <a href="/CGU">conditions générales d'utilisation.</a></label>
+                      <label htmlFor="rgpd">J'accepte les <a href="/CGU" className={styles.cgu}>conditions générales d'utilisation.</a></label>
                   </div>
                   <ErrorMessage name="rgpd" component="div" />
 
