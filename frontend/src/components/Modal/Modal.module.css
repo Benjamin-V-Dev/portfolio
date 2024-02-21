@@ -52,21 +52,13 @@
 /* ------------------------------------------------
 -------------------- CONTENT-MODAL -----------------
 ------------------------------------------------ */
-
-.contact_modal_content{
-    margin: 0 auto;
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
-    padding: 0 2% 2% 2%;
+.contact_modal_layout{
+    margin: 15vh auto 5vh auto;
+    width: clamp(310px, 80vw, 1000px);
+    height: auto;
 }
-
-.contact_modal_content h2{
+.contact_modal_layout h2{
     color: #FFF;
-    margin-bottom: 7.5%;
     text-align: center;
     font-family: Roboto;
     font-size: 30px;
@@ -81,7 +73,7 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-    width: 600px;
+    width: 100%;
 }
 
 .contact_modal_content form input::placeholder,
@@ -164,24 +156,21 @@
 ------------------------------------------------ */
 @media (max-width: 768px) {
 
-    .contact_modal_content form{
-        width: 500px;
-    }
 }
 
 @media (max-width: 560px) {
 
-    .contact_modal_content form{
-        width: 350px;
-    }
 }
 /* ------------------------------------------------
 ---------- MODAL RESPONSIVE MOBILE L --------------
 ------------------------------------------------ */
 @media (max-width: 425px) {
-
-    .contact_modal_content{
-        width: 250px;
+    .close_modal {
+        right: 10px;
+        top: 20px;
+    }
+    .contact_modal_content form textarea{
+        height: 100px;
     }
 }
 /* ------------------------------------------------
@@ -189,16 +178,10 @@
 ------------------------------------------------ */
 @media (max-width: 375px) {
 
-    .contact_modal_content form{
-        width: 280px;
-    }
 }
 /* ------------------------------------------------
 ---------- MODAL RESPONSIVE MOBILE M --------------
 ------------------------------------------------ */
 @media (max-width: 320px) {
 
-    .contact_modal_content form{
-        width: 280px;
-    }
 }

@@ -15,7 +15,7 @@ export default function Modal() {
         <div className={styles.close_modal}>
           <p>Fermer</p>
         </div>
-        <div className={styles.contact_modal_content} onClick={(e) => e.stopPropagation()}>
+        <div className={styles.contact_modal_layout} onClick={(e) => e.stopPropagation()}>
           <h2>Contactez-moi</h2>
           <div className={styles.contact_modal_content}>
             <ContactForm></ContactForm>

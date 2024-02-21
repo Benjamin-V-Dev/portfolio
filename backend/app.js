@@ -6,13 +6,17 @@ const nodemailer = require('nodemailer')
 const compression = require('compression');
 const cors = require('cors')
 
+
+const Project = require('../backend/models/Project');
+
+
 const app = express();
 
 app.use(compression());
 
 app.use(helmet());
 
-mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}`)
+mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}`)
   .then(() => console.log('Connexion à MongoDB réussie !'))
   .catch(() => console.log('Connexion à MongoDB échouée !'));
 
@@ -32,6 +36,9 @@ app.get("/", (req, res)=>{
   res.json("hello")
 })
 
+app.get('/api/project', (req, res, next) => {
+  Project.find().then(things => res.status(200).json(things)).catch(error => res.status(400).json({error}))
+})
 
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST, // Remplace par ton domaine
