@@ -8,7 +8,8 @@ const projects =  [
         imgAlt: "Capture d'écran du projet 'Portfolio'",
         github: "https://github.com/Benjamin-V-Dev/Portfolio",
         tags: ["React", "Nodemailer", "NextJS"],
-        link: "https://benjamin-vallon.fr"
+        link: "https://benjamin-vallon.fr",
+        difficulties :"Création du formulaire de contact"
       },
       {
         id: 2,
@@ -18,7 +19,8 @@ const projects =  [
         imgAlt: "logo du projet 'Map-Diag'",
         github: "/",
         tags: ["React", "Node", "Leaflet", "OpenStreetMap"],
-        link: "https://map-diag.fr/"
+        link: "https://map-diag.fr/",
+        difficulties :"Gestion des coordonnées GPS"
       },
       {
         id: 3,
@@ -28,7 +30,9 @@ const projects =  [
         imgAlt: "Capture d'écran du projet 'Kasa'",
         github: "https://github.com/Benjamin-V-Dev/Kasa",
         tags: ["React", "Sass"],
-        link: "https://kasa.benjamin-vallon.fr/"
+        link: "https://kasa.benjamin-vallon.fr/",
+        difficulties :"Gestion des props et des composants"
+
       },
       {
         id: 4,
@@ -38,7 +42,8 @@ const projects =  [
         imgAlt: "Capture d'écran du projet 'Mon Vieux Grimoire'",
         github: "https://github.com/Benjamin-V-Dev/MonVieuxGrimoire",
         tags: ["Node.js", "MongoDB"],
-        link: "https://mvg.benjamin-vallon.fr/"
+        link: "https://mvg.benjamin-vallon.fr/",
+        difficulties :"Architecture MVC"
       }
 ]
 

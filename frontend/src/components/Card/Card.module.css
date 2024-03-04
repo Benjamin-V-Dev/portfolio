@@ -17,6 +17,13 @@
     cursor: pointer !important;
 }
 
+.cardFlex{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .specialCard .imgContainer{
     background-color: black;
 }
@@ -68,7 +75,7 @@
     line-height: 30px;
 }
 
-.titles h3 {
+.titles h3,p {
     color: #FFF;
     font-family: Roboto;
     font-size: 13px;

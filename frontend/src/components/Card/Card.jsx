@@ -12,7 +12,7 @@ export default function Card({ project, isSpecial }) {
     return (
         <>
             <a href={project.link} target='_blank' rel='noopener noreferrer' className={cardClass}>
-                <div key={project.id}> 
+                <div className={styles.cardFlex} key={project.id}> 
                     <div className={styles.imgContainer}>
 
                     <LazyLoadImage
@@ -27,6 +27,7 @@ export default function Card({ project, isSpecial }) {
                         <div>
                             <h2>{project.title}</h2>
                             <h3>{project.subtitle}</h3>
+                            <p><strong>Difficultées :</strong> {project.difficulties}</p>
                         </div>
 
                         <div className={styles.github}>

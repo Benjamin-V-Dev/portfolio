@@ -7,7 +7,7 @@ const compression = require('compression');
 const cors = require('cors')
 
 
-const Project = require('../backend/models/Project');
+const Project = require('./models/Project');
 
 
 const app = express();
@@ -37,9 +37,17 @@ app.get("/", (req, res)=>{
 })
 
 app.get('/api/project', (req, res, next) => {
-  Project.find().then(things => res.status(200).json(things)).catch(error => res.status(400).json({error}))
-})
+  Project.find()
+    .then(projects => {
+      res.status(200).json(projects);
+      console.log(res); // Déplacez votre console.log ici
+    })
+    .catch(error => res.status(400).json({error}));
+});
 
+
+
+//Partie SMTP
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST, // Remplace par ton domaine
   port: 465, // Port SMTP standard pour la soumission de mails

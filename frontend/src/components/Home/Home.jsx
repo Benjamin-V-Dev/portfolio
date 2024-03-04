@@ -5,12 +5,12 @@ import Card from '../Card/Card'
 
 
 
-export default function Home() {
+export default function Home({data}) {
 
   return (
     <>
       <section className={styles.headings}>
-        <h1>Benjamin Vallon,<br /><span>Développeur Web</span></h1>
+        <h1>Benjamin Vallon,<br /><span>Développeur Web React</span></h1>
 
       </section>
 
@@ -25,6 +25,7 @@ export default function Home() {
           ))}
         </div>
       </section>
+
     </>
   );
 }
