@@ -75,7 +75,8 @@
     line-height: 30px;
 }
 
-.titles h3,p {
+.titles h3,
+.difficulties {
     color: #FFF;
     font-family: Roboto;
     font-size: 13px;
