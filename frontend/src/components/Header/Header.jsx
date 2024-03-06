@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../Header/Header.module.css';
 import { NavLink } from 'react-router-dom';
-import { useModal } from '../../providers/modaleProvider'; // Assure-toi que le chemin est correct
+import { useModal } from '../../providers/modaleProvider';
 
 export default function Header() {
   const { openModal } = useModal();
