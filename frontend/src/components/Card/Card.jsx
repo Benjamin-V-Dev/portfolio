@@ -27,7 +27,6 @@ export default function Card({ project, isSpecial }) {
                         <div>
                             <h2>{project.title}</h2>
                             <h3>{project.subtitle}</h3>
-                            <p className={styles.difficulties}><strong>Difficultées :</strong> {project.difficulties}</p>
                         </div>
 
                         <div className={styles.github}>

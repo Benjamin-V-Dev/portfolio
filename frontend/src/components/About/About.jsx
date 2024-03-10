@@ -51,10 +51,10 @@ export default function AboutPage() {
 
             </section>
 
-            <a href="/CV.pdf" download="CV_Benjamin_Vallon" className={styles.cv}>
+            {/* <a href="/CV.pdf" download="CV_Benjamin_Vallon" className={styles.cv}>
                 <img src="/CV.png" alt="Télécharger le CV de Benjamin Vallon" />
                 <p>CV</p>
-            </a>
+            </a> */}
             
         </main>
     )
