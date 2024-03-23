@@ -1,0 +1,28 @@
+.cguMain{
+    margin-bottom: 100px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.cguSection{
+    all: unset;
+}
+
+.cguSectionFirst{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cguSection h2{
+    margin-bottom: 15px;
+    margin-top: 50px;
+}
+
+
+.cguSection li{
+    display: block;
+    margin-left: 25px;
+}
