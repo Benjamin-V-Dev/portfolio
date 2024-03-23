@@ -70,8 +70,9 @@ const ContactForm = () => {
 
                   <div>
                       <Field type="checkbox" name="rgpd" />
-                      <label htmlFor="rgpd">J'accepte les <a href="/CGU" className={styles.cgu}>conditions générales d'utilisation.</a></label>
+                      <label htmlFor="rgpd">J'accepte la <a href="/CGU" className={styles.cgu}>politique de traitement des données personnelles.</a></label>
                   </div>
+                  <p>Monsieur Benjamin Vallon traite les données recueillies pour répondre à vos demandes. Pour en savoir plus sur la gestion de vos données personnelles et pour exercer vos droits, reportez-vous à notre <a href="/CGU" className={styles.cgu}>politique de confidentialité.</a></p>
                   <ErrorMessage name="rgpd" component="div" />
 
                   <button className='defaultButton' type="submit">Envoyer</button>
